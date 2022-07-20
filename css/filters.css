@@ -1,0 +1,105 @@
+/* Filters */
+
+.filter {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 0.8fr;
+    grid-auto-flow: column;
+    align-items: center;
+    text-align: end;
+}
+
+.filter-wrapper {
+    display: grid;
+    grid-gap: 5px;
+    align-items: stretch;
+    grid-template-columns: 85% 15%;
+    font-family: 'Lora', serif;
+}
+
+#filter-search {
+    grid-template-columns: 25% 60% 15%;
+    padding: 0 12px 1px 12px;
+    align-items: baseline;
+}
+
+/* Search bar */
+
+input {
+    font-family: 'Lora', serif;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    max-width: 235px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    list-style-type: none;
+    opacity: 100%;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    font-family: 'Lora', serif;
+    padding: 10px;
+}
+
+.ui-autocomplete li:hover {
+    background-color: #c0c0c0;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+#filter-search label {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.search-input {
+    display: block;
+    width: 100%;
+}
+
+#search-not-found-text {
+    color: rgb(245, 86, 86);
+    text-align: start;
+    opacity: 0;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 1rem;
+    border-radius:5px;
+}
+
+select {
+    font-family: 'Lora', serif;
+    font-size: 1em;
+}
+
+button {
+    font-family: 'Girassol', cursive;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+}
+
+.filter-buttons {
+    align-self: center;
+}
+
+fieldset {
+    border-radius:5px;
+}

@@ -1,0 +1,235 @@
+/* Deck */
+
+#deck-area {
+    display: flex;
+    justify-content: center;
+}
+
+#deck-slide-area {
+    width: 200px;
+    height: 300px;
+    margin: 10px 0 10px 0;
+}
+
+#node-card, #node-tooltip {
+    width: 225px;
+    height: 300px;
+    outline: thin solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:#ededed;
+}
+
+#node-card > *, #node-tooltip > * {
+    margin: 0 15px 0 15px;
+}
+
+.tooltip-background {
+    pointer-events: none;
+    margin: 0 !important;
+    position: absolute;
+    opacity: 2%;
+}
+
+.tooltip-background img {
+    -webkit-mask-image: linear-gradient(to top, transparent 20%, black 60%);
+}
+
+#deck-viz ul {
+    list-style-type: none;
+}
+
+.tooltip-title {
+    margin: 4px 25px 0 15px !important;
+    color: white;
+    background:#545454;
+    max-height: 4rem;
+    max-width: 180px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    overflow-y:auto;
+    z-index: 1;
+}
+*::-webkit-scrollbar{
+    width:5px;
+}
+*::-webkit-scrollbar-track {
+    background: white;
+    border-radius:5px;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    border: 3px solid dimgray;
+}
+
+.tooltip-img {
+    height: 120px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-img img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.tooltip-subtext {
+    flex: 1 1 0;
+    border-top: 1px solid dimgrey;
+    max-height: 110px;
+    margin-top: 10px;
+    padding: 3px 5px 0 5px;
+    font-family: 'Lora',serif;
+    line-height: 0.95rem;
+}
+#deck-viz li {
+    display: flex;
+    font-size: 10px;
+}
+
+.tooltip-line {
+    height: 0;
+    outline: thin dashed dimgray;
+    opacity: 25%;
+    margin:auto;
+    width:50%;
+}
+.tooltip-subtext li .deck-metric {
+    font-size: 0.8rem;
+    flex: 1 1 0;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+.tooltip-subtext li div {
+    flex: auto;
+}
+.tooltip-subtext li .deck-metric-value {
+    font-size: 0.8rem;
+    flex: 1 1 0;
+    text-align: right;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.tooltip-qmark {
+    font-family:'Lora',serif;
+}
+.tooltip-qmark img {
+    position: absolute;
+    width: 15px;
+    transform: translate(164px, -287px);
+}
+.tooltip-qmark:hover #game-link-tooltip {
+    display: inline-block;
+    transform: translate(183px, -318px);
+}
+
+#node-card-back {
+    outline: thin solid black;
+    display: flex;
+}
+
+#node-card-back img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#card_back_copy1 {
+    position: absolute;
+    transform: translate(0px,-300px);
+    outline: thin solid black;
+    z-index:-1;
+}
+
+#card_back_copy2 {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(0px,-300px);
+    z-index: -2;
+}
+#card_back_copy3 {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(0px,-290px) scale(.95);
+    outline: thin solid black;
+    z-index: -2;
+}
+#card_back_copy4 {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(-5px,-285px) scale(.95) rotate(3deg);
+    outline: thin solid black;
+    z-index: -3;
+}
+#card_back_copy5 {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(-5px,-285px) scale(.95) rotate(-3deg);
+    outline: thin solid black;
+    z-index: -4;
+}
+#card_back_copy6 {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(-5px,-283px) scale(.95) rotate(0deg);
+    outline: thin solid black;
+    z-index: -5;
+}
+
+/* Container for positioning */
+
+#flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#flip-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* Position front and back side */
+
+#node-card, #node-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style Back */
+
+#node-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Tool Tip */
+
+#node-tooltip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: transform 0.5s;
+    transition-timing-function: ease-out;
+    z-index: -2;
+}
+
+#node-tooltip.is-hovered {
+    transform: translate(200px);
+}

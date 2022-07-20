@@ -1,0 +1,125 @@
+/* Border */
+
+.force-hex-border {
+    stroke: #8a8989;
+    stroke-width: 2;
+    opacity: 1;
+}
+
+.themeIndicator {
+    stroke: #8a8989;
+    stroke-width: 1;
+    opacity: 1;
+}
+
+.force-hex-border-text {
+    font-size: 1.5rem;
+}
+#force-hex-border-text-multi {
+    font-size: 1rem;
+}
+
+/* Links and nodes */
+
+.link {
+    stroke: #666666;
+}
+
+.node {
+    opacity: 1;
+}
+
+.unfocused {
+    opacity: 0.3;
+}
+
+.node:hover {
+    cursor: pointer;
+    stroke: #444444;
+    stroke-width: 0.3;
+    opacity: 1;
+}
+
+.defaultNode {
+    stroke: #F7F7F7;
+    stroke-width: 0.2;
+}
+
+.focused {
+    opacity: 1;
+    stroke: #666666;
+    stroke-width: 0.2;
+}
+
+.focusedTemp {
+    opacity: 1;
+    stroke: #666666;
+    stroke-width: 0.2;
+}
+
+.selectedNode {
+    cursor: pointer;
+    stroke: #292828;
+    stroke-width: 0.3;
+    opacity: 1;
+}
+
+.rankFirst {
+    stroke: #000;
+    stroke-width: 0.4;
+}
+
+.rankSecond {
+    stroke: #000;
+    stroke-width: 0.3;
+}
+
+.rankThird {
+    stroke: #000;
+    stroke-width: 0.2;
+}
+
+.rankFirst:hover {
+    stroke: #000;
+    stroke-width: 0.5;
+}
+
+.rankSecond:hover {
+    stroke: #000;
+    stroke-width: 0.4;
+}
+
+.rankThird:hover {
+    stroke: #000;
+    stroke-width: 0.3;
+}
+
+.rankFirstSelected {
+    stroke: #000;
+    stroke-width: 0.5;
+}
+
+.rankSecondSelected {
+    stroke: #000;
+    stroke-width: 0.4;
+}
+
+.rankThirdSelected {
+    stroke: #000;
+    stroke-width: 0.3;
+}
+
+/* Legend */
+
+.legend-text {
+    font-family: 'Lora', serif;
+    font-size: 0.7rem;
+}
+
+.legend-rank-explanation {
+    margin-left: 10px;
+}
+
+#legend{
+    margin-top: 10px;
+}

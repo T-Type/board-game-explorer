@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet"/>
+<head>
+    <title>Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forceDirectedGraphStyle.css">
+    <link rel="stylesheet" href="css/barchart.css">
+    <link rel="stylesheet" href="css/hexbin.css">
+    <link rel="stylesheet" href="css/deck.css">
+    <link rel="stylesheet" href="css/filters.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="container-left">
+        <div class="filters" id="filters">
+            <div class="filter" id="filter-search">
+                <label for="search-bar">Find a game</label>
+                <div class="search-input">
+                    <input type="search" id="search-bar" name="search" class="search-input" placeholder="Search games">
+                    <small id="search-not-found-text" class="search-input">.</small>
+                </div>
+                <button class="filter-button" id="search-button" type="button">Search</button>
+            </div>
+            <fieldset>
+                <legend>Filter the games</legend>
+                <div class="filter-wrapper">
+                    <div>
+                        <div class="filter" id="filter-age">
+                            <label for="age">How old is your youngest player?</label>
+                            <select name="age" id="age">
+                                <option value="">Show me everything</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                            </select>
+                        </div>
+                        <div class="filter" id="filter-players">
+                            <label for="players">How many players do you have?</label>
+                            <select name="players" id="players">
+                                <option value="">Show me everything</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">More than 10</option>
+                            </select>
+                        </div>
+                        <div class="filter" id="filter-time">
+                            <label for="time">How much time do you have?</label>
+                            <select name="time" id="time">
+                                <option value="">Show me everything</option>
+                                <option value="15">15 minutes or less</option>
+                                <option value="30">30 minutes or less</option>
+                                <option value="45">45 minutes or less</option>
+                                <option value="60">60 minutes or less</option>
+                                <option value="90">90 minutes or less</option>
+                            </select>
+                        </div>
+                        <div class="filter" id="filter-type">
+                            <label for="type">What kind of game do you want?</label>
+                            <select name="type" id="type">
+                                <option value="">Show me everything</option>
+                                <option value="type_abstract">Abstract Strategy</option>
+                                <option value="type_children">Children's</option>
+                                <option value="type_customizable">Customizable</option>
+                                <option value="type_family">Family</option>
+                                <option value="type_party">Party</option>
+                                <option value="type_strategy">Strategy</option>
+                                <option value="type_thematic">Thematic</option>
+                                <option value="type_war">Wargame</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-button" id="filter-button" type="button">Go</button>
+                        <button class="filter-button" id="reset-button" type="button">Reset</button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="right-bottom">
+            <div id="bar-viz"></div>
+        </div>
+    </div>
+
+    <div class="container-mid">
+        <div class="intro-title">
+            <h1>Bored? Games!</h1>
+        </div>
+        <div class="intro-description">
+            <p>
+                With hundreds of thousands of games to play, it isn't always easy to find the one that will finally
+                replace Catan as the board game night favorite or make a perfect gift for your friend Jane who loves
+                cats but hates complicated rules. But we can make it easier!
+                Discover hidden gems as you explore the top 1000 games currently available (as ranked on BoardGameGeek).
+            </p>
+        </div>
+        <div id="deck-area">
+            <div id="deck-viz">
+                <div id="flip-card-inner" class="is-flipped">
+                    <div id="node-card"></div>
+                    <div id="node-card-back">
+                        <img src="images/card_back.svg" alt="card-back">
+                    </div>
+                </div>
+                <img id="card_back_copy1" src="images/card_back.svg" alt="card-back1">
+                <img id="card_back_copy2" src="images/card_back.svg" alt="card-back2">
+                <img id="card_back_copy3" src="images/card_back.svg" alt="card-back3">
+                <img id="card_back_copy4" src="images/card_back.svg" alt="card-back4">
+                <img id="card_back_copy5" src="images/card_back.svg" alt="card-back5">
+                <img id="card_back_copy6" src="images/card_back.svg" alt="card-back6">
+                <div id="node-tooltip"></div>
+            </div>
+            <div id="deck-slide-area"></div>
+        </div>
+        <div id="hexbin-viz">
+            <svg id="hexbin-svg"></svg>
+            <div id="hexbin_legend_border"></div>
+        </div>
+    </div>
+
+    <div class="container-right">
+        <div class="main-viz-container">
+            <div id="main-viz">
+                <svg id="force-chart"></svg>
+            </div>
+            <div class="main-viz-extras">
+                <div id="dice"></div>
+                <div id="legend"></div>
+            </div>
+        </div>
+        <div class="attribution">
+            <text>All data attributable to <a href="https://boardgamegeek.com/">BoardGameGeek.com</a></text>
+        </div>
+    </div>
+
+</div>
+
+<div class="tooltip" id="tooltip-barchart-cluster"></div>
+<div class="tooltip" id="tooltip-barchart-theme"></div>
+<div class="tooltip legend-text" id="tooltip-force-legend"></div>
+<div class="tooltip legend-text" id="tooltip-hex-legend"></div>
+<div class="tooltip" id="hexbin-tooltip"></div>
+
+<!-- D3 external scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+<script src="js/libraries/d3.v6.min.js"></script>
+<script src="js/libraries/d3.forceInABox.js"></script>
+<script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+
+<!-- viz components -->
+<script src="js/forceGraphHelpers.js"></script>
+<script src="js/dice.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/legend.js"></script>
+<script src="js/forceDirectedGraph.js"></script>
+<script src="js/hexbin.js"></script>
+<script src="js/barchart.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

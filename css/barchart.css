@@ -1,0 +1,108 @@
+/* Legend on left side */
+
+.cluster-group-legend {
+    opacity: 0.5;
+}
+
+#bar-viz .y-axis .tick {
+    fill: black;
+    cursor: default;
+}
+
+.cluster-group-legend.selected,
+.cluster-group-legend.default {
+    opacity: 1;
+}
+
+.cluster-group-legend.hovered {
+    stroke-width: 2px;
+    stroke: black;
+}
+
+/* Axis on right side */
+
+.cluster-group .y-axis-cluster .tick {
+    font-family: 'Lora', serif;
+    font-size: 0.7rem;
+    fill: dimgrey;
+    opacity: 0.5;
+}
+
+.cluster-group .y-axis-cluster .tick.default,
+.cluster-group .y-axis-cluster .tick.selected {
+    opacity: 1;
+}
+
+.cluster-group .y-axis-cluster .tick.hovered {
+    font-size: 0.9rem;
+    cursor: default;
+}
+
+/* Bar groups */
+
+.bar-group {
+    opacity: 0.5;
+}
+
+.bar-group.selected,
+.bar-group.default {
+    opacity: 1;
+}
+
+.bar-group.hovered .bar {
+    stroke-width: 2px;
+    stroke: black;
+}
+
+.bar-connector {
+    stroke-width: 2px;
+    opacity: 0;
+    stroke-dasharray: 4;
+}
+
+.bar-group.hovered .bar-connector,
+.bar-group.selected .bar-connector {
+    opacity: 0.7;
+}
+
+.bar-fixed {
+    shape-rendering: crispEdges;
+    opacity: 0.5;
+}
+
+.bar {
+    shape-rendering: crispEdges;
+}
+
+#bar-viz .chart-title {
+    font-size: 1.5rem;
+}
+
+#tooltip-barchart-cluster {
+    max-width: 250px;
+}
+
+#tooltip-barchart-theme ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+#tooltip-barchart-cluster .tooltip-name {
+    font-size:1.5rem;
+    text-align:center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+}
+
+#tooltip-barchart-cluster .tooltip-description {
+    font-family: 'Lora', serif;
+}
+
+span {
+    font-weight:bold;
+}
+
+
+

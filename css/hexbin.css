@@ -1,0 +1,52 @@
+/* Hexbin */
+
+#hexbin-svg .tick {
+    font-size: 12px;
+}
+
+#hexbin-svg .chart-title {
+    font-size: 1.3rem;
+    transform: translate(0,6px);
+}
+
+#hexbin-svg text {
+    user-select: none;
+}
+
+#hexbin_legend_border{
+    width: 77px;
+    height: 70px;
+    position: absolute;
+    border: 1px solid gray;
+    transform: translate(45px, -288px);
+    pointer-events: none;
+}
+
+.legend-title {
+    text-decoration: underline;
+}
+
+#robber-container {
+    pointer-events: none;
+}
+
+#hexbin-svg path:hover {
+    transition: .3s;
+}
+
+#hexbin-tooltip {
+    padding: 8px;
+    min-width: 160px;
+    color: #333;
+    font-family: 'Lora',serif;
+}
+
+#hexbin-tooltip ul {
+    margin: 5px 0 0 0;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+#hexbin-tooltip li span {
+    font-weight:bold;
+}
