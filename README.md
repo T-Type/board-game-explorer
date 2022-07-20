@@ -1,5 +1,16 @@
-# Project citations
+# Board Game Explorer
+Link: https://www.students.cs.ubc.ca/~cs-436v/22Jan/fame/projects/project_g22/index.html
 
+## Created by
+Michelle Langlois, Nicole Gaboury, Andrew Tsai
+
+## Summary
+A web app using data from BoardGameGeek. Users interact with visualizations, widgets, and linked views to explore board games.
+
+## Stack
+HTML, CSS, JavaScript (D3.js)
+
+# Project citations
 
 ## Shared
 - [color scale: categorical Tableau10 from D3](https://observablehq.com/@d3/color-schemes)
